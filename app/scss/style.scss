@@ -299,9 +299,8 @@
         cursor: pointer;
         transition: all .7s;
         &:hover{
-            border-radius: 50%;
-            width: 25%;
-            margin: 0 auto;
+            border-radius: 10px;
+            color: #000;
             transition: all .5s;
         }
     }
