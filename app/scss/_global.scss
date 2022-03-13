@@ -1,0 +1,46 @@
+body{
+    font-size: 16px;
+    line-height: 140%;
+    color: #000;
+    font-family: 'Elsie', cursive;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.button{
+    @extend %oswald;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 12px 24px;
+}
+.title{
+    @extend %oswald;
+    font-size: 32px;
+    line-height: 38px;
+    color: $title;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 20px;
+    line-height: 32px;
+    color: $default;
+    margin: 22px 0 62px 0;
+    text-align: center;
+}
+
+@media (max-width: 440px){
+    .subtitle{
+        font-size: 18px;
+        line-height: 26px;
+        color: #737373;
+        margin: 15px 0 40px 0;
+    }
+}
