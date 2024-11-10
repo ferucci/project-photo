@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/main.min.js" defer></script>
+    <title>Сайт визитка</title>
+</head>
+
+<body>
+
+    <main class="main">
+        <aside class="aside">
+            <nav class="menu">
+                <h2 class="menu__logo">
+                    Сверхъестественное
+                </h2>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--active" href="#header">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#advantages">Приемущества</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#portfolio">Галерея</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.7333 1.44165H2.83333C1.87 1.44165 1.13333 2.17832 1.13333 3.14165V15.0417C1.13333 16.005 1.87 16.7417 2.83333 16.7417H8.78333V10.7917H7.08333V8.69498H8.78333V6.93832C8.78333 5.12498 9.80333 3.82165 11.9567 3.82165H13.4867V6.03165H12.4667C11.6167 6.03165 11.2767 6.65498 11.2767 7.27832V8.69498H13.4867L13.0333 10.7917H11.3333V16.7417H14.7333C15.6967 16.7417 16.4333 16.005 16.4333 15.0417V3.14165C16.4333 2.17832 15.6967 1.44165 14.7333 1.44165Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg width="23" height="18" viewBox="0 0 23 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.41 7.33495C15.41 7.33495 14.1633 11.3016 14.05 11.585C13.9933 11.245 13.0867 4.16162 13.0867 4.16162C10.9333 4.16162 9.79999 5.69162 9.17666 7.27829C9.17666 7.27829 7.64666 11.245 7.53333 11.585C7.53333 11.3016 7.30666 7.33495 7.30666 7.33495C7.19333 5.35162 5.38 4.16162 3.90666 4.16162L5.66333 14.8716C7.93 14.8716 9.11999 13.3416 9.74333 11.755C9.74333 11.755 11.1033 8.24162 11.16 8.12829C11.16 8.29829 12.1233 14.9283 12.1233 14.9283C14.39 14.9283 15.58 13.5116 16.26 11.925L19.4333 4.16162C17.2233 4.16162 16.0333 5.69162 15.41 7.33495Z"
+                                    fill="white" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg width="23" height="18" viewBox="0 0 23 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.4133 6.20165C17.79 4.84165 16.8833 3.65165 15.6367 2.80165C14.39 1.95165 12.9167 1.44165 11.33 1.44165C10.1967 1.44165 9.17667 1.72498 8.38333 2.00832C7.02333 2.57498 5.83333 3.53832 4.98333 4.84165C4.13333 6.14498 3.56667 7.56165 3.56667 9.20498C3.56667 10.2817 3.79333 11.3583 4.19 12.1517C4.81333 13.5117 5.72 14.7016 6.96667 15.5517C8.21333 16.4017 9.68667 16.9116 11.33 16.9116C12.4067 16.9116 13.4833 16.6283 14.2767 16.345C15.6367 15.7217 16.8267 14.815 17.6767 13.5117C18.5267 12.2083 19.0367 10.7916 19.0367 9.20498C19.0367 8.07165 18.8667 7.05165 18.4133 6.20165ZM15.0133 13.8517C14.8433 13.0583 14.56 11.8117 13.9933 10.1683C14.22 10.1683 14.6167 10.055 14.8433 10.055C15.5233 10.055 16.09 10.1683 16.6 10.225C16.77 10.225 16.94 10.3383 17.11 10.3383C16.94 11.075 16.6567 11.6983 16.26 12.3783C15.9767 12.8883 15.58 13.455 15.0133 13.8517ZM17.28 8.69498C17.11 8.69498 16.94 8.58165 16.6567 8.58165C16.1467 8.52498 15.4667 8.41165 14.73 8.41165C14.2767 8.41165 13.88 8.41165 13.4833 8.52498V8.41165C13.37 8.24165 13.3133 7.95832 13.2 7.84498C14.3333 7.33498 15.1833 6.71165 15.6933 6.31498C15.92 6.03165 16.1467 5.86165 16.3167 5.74832C16.8267 6.54165 17.1667 7.56165 17.28 8.69498ZM14.39 5.12498C13.9367 5.40832 13.2567 5.97498 12.35 6.25832C11.84 5.35165 11.33 4.55832 10.9333 3.99165C10.7067 3.70832 10.5367 3.48165 10.3667 3.25498C10.5933 3.14165 10.99 3.14165 11.33 3.14165C12.7467 3.14165 14.05 3.65165 15.07 4.38832C14.9 4.67165 14.73 4.84165 14.39 5.12498ZM8.49667 3.93498C8.83667 4.44498 9.63 5.57832 10.48 6.88165C8.32667 7.39165 6.4 7.50498 5.55 7.56165C5.83333 6.76832 6.17333 6.14498 6.68333 5.52165C7.13667 4.84165 7.81667 4.27498 8.49667 3.93498ZM7.64667 9.20498C8.78 9.09165 10.0267 8.86498 11.33 8.52498C11.3867 8.69498 11.5 8.86498 11.5567 9.03498C10.7067 9.31832 9.97 9.71498 9.34667 10.1683C8.32667 10.8483 7.64667 11.585 7.13667 12.3217C6.96667 12.4917 6.79667 12.775 6.62667 12.945C5.89 11.9816 5.43667 10.735 5.38 9.43165C5.77667 9.37498 6.62667 9.26165 7.64667 9.20498ZM8.95 12.775C9.63 12.095 10.7633 11.245 12.2933 10.6217C12.9733 12.4917 13.3133 14.0217 13.4833 14.7583C12.8033 15.0417 12.1233 15.0983 11.33 15.0983C10.0833 15.0983 8.83667 14.645 7.81667 13.965C7.98667 13.795 8.32667 13.285 8.95 12.775Z"
+                                    fill="white" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg width="23" height="18" viewBox="0 0 23 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.8467 6.31494C17.8467 6.42827 17.8467 6.59827 17.8467 6.7116C17.8467 10.9616 14.6167 15.8349 8.72334 15.8349C6.91 15.8349 5.21 15.3249 3.79333 14.4183C4.02 14.4183 4.30334 14.4749 4.58667 14.4749C6.11667 14.4749 7.47667 13.9649 8.55334 13.1149C7.13667 13.1149 5.94667 12.1516 5.55 10.9049C5.72 10.9616 5.94667 10.9616 6.17334 10.9616C6.45667 10.9616 6.74 10.9049 7.02334 10.8483C5.55 10.5083 4.41667 9.20494 4.41667 7.67493C4.41667 7.67493 4.41667 7.67493 4.41667 7.61827C4.87 7.84493 5.32334 8.01494 5.89 8.01494C5.04 7.44827 4.47333 6.48494 4.47333 5.3516C4.47333 4.78493 4.64334 4.21827 4.92667 3.76493C6.51334 5.6916 8.89334 6.99493 11.5567 7.10827C11.5 6.8816 11.5 6.65493 11.5 6.3716C11.5 4.61493 12.9167 3.1416 14.73 3.1416C15.6367 3.1416 16.4867 3.53827 17.0533 4.1616C17.79 3.9916 18.47 3.76493 19.0933 3.36827C18.8667 4.10493 18.3567 4.72827 17.6767 5.12493C18.2433 5.06827 18.8667 4.89827 19.4333 4.6716C18.98 5.29493 18.47 5.8616 17.8467 6.31494Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg width="23" height="18" viewBox="0 0 23 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.3767 3.93493C19.2633 3.4816 18.81 3.1416 18.3 3.1416H4.7C4.19 3.1416 3.73667 3.4816 3.62333 3.93493L11.5 11.0749L19.3767 3.93493ZM15.58 9.65827L19.4333 13.1149V6.2016L15.58 9.65827ZM11.5 13.3416L8.66667 10.7916L3.62333 15.3249C3.73667 15.8349 4.19 16.1749 4.7 16.1749H18.3C18.81 16.1749 19.2633 15.8349 19.3767 15.3816L14.3333 10.8483L11.5 13.3416ZM3.56667 6.2016V13.1149L7.42 9.65827L3.56667 6.2016Z"
+                                    fill="white" />
+                            </svg>
+
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <button class="header__menu-button menu-button">
+                <span class="menu-button__item"></span>
+            </button>
+            <header class="content header" data-content="header">
+                <div class="header__inner  content__inner">
+                    <h1 class="header__title">
+                        Добро пожаловать в Сверхъестественное
+                    </h1>
+                    <p class="header__subtitle">
+                        Красота и великолепие
+                    </p>
+                    <div class="header__buttons">
+                        <button class="button header__button">Написать</button>
+                        <a class="button header__link" href="#">Позвонить</a>
+                    </div>
+                </div>
+            </header>
+            <section class="content advantages" data-content="advantages">
+                <div class="advantages__inner  content__inner">
+                    <div class="content__header">
+                        <h2 class="title">
+                            Мои приемущества
+                        </h2>
+                        <p class="subtitle">
+                            Данный блок демонстрирует достижения
+                        </p>
+                    </div>
+
+                    <div class="advantages__items">
+                        <div class="advantages__item advantages__item--camera">
+                            <h3 class="advantages__title">
+                                Качество съемки
+                            </h3>
+                            <p class="advantages__text">
+                                Высокое качество зависит от профессиолнального оборудования. Использую продукцию
+                                фирмы GoPro, наши материалы получаются высококачественными и приятными пользовательскому
+                                глазу.
+                            </p>
+                            <a class="advantages__link" href="#">
+                                Читать полностью
+                            </a>
+                        </div>
+                        <div class="advantages__item advantages__item--adapt">
+                            <h3 class="advantages__title">
+                                Адаптивные изображения
+                            </h3>
+                            <p class="advantages__text">
+                                При уменьшении/увеличении экрана качетсво изображений не меняется. Благодаря высокому
+                                разрешении используемой матрицы.
+                            </p>
+                            <a class="advantages__link" href="#">
+                                Читать полностью
+                            </a>
+                        </div>
+                        <div class="advantages__item advantages__item--options">
+                            <h3 class="advantages__title">
+                                Удобство эксплуатации
+                            </h3>
+                            <p class="advantages__text">
+                                Многообразие использования достойный показатель вашего внимания. Регулировка фокуса,
+                                расстановка элементов и многое другое вы можете осуществить в любом редакторе, без
+                                потери качества!
+                            </p>
+                            <a class="advantages__link" href="#">
+                                Читать полностью
+                            </a>
+                        </div>
+                        <div class="advantages__item advantages__item--fly">
+                            <h3 class="advantages__title">
+                                Гибкость и экстравагантность
+                            </h3>
+                            <p class="advantages__text">
+                                Высокое качество одно из самых основных приемуществ. Используется продукция
+                                фирмы ..., исходя из этого материалы получаются высококачественными и приятными
+                                пользовательскому глазу.
+                            </p>
+                            <a class="advantages__link" href="#">
+                                Читать полностью
+                            </a>
+                        </div>
+                    </div>
+                    <div class="advantages__action">
+                        <p class="advantages__action-text">
+                            Забронировать съёмку
+                        </p>
+                        <a class="button advantages__button" href="#">Позвонить</a>
+                    </div>
+                </div>
+
+            </section>
+            <section class="content portfolio" data-content="portfolio">
+                <div class="portfolio__inner content__inner">
+
+                    <div class="content__header">
+                        <h2 class="title">
+                            Мои работы
+                        </h2>
+                        <p class="subtitle">
+                            Обязательно посмотрите представленные шедевры
+                        </p>
+                    </div>
+
+                    <div class="portfolio__items">
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work1.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work2.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work3.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work4.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work5.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work6.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work7.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work8.jpg" alt="работы с галереи">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content contacts" data-content="contacts">
+                <div class="contacts__inner content__inner">
+                    <div class="content__header">
+                        <h2 class="title">
+                            Контактная форма
+                        </h2>
+                        <p class="subtitle">
+                            Здесь вы можете оставить пожелания и предложения.
+                        </p>
+                    </div>
+                    <form class="contacts__form" action="#">
+                        <div class="contacts__form-inner">
+                            <div class="contacts__form-box">
+                                <input class="contacts__input" type="text" placeholder="Имя">
+                                <input class="contacts__input" type="email" placeholder="Емайл@">
+                            </div>
+                            <textarea class="contacts__textarea" placeholder="Сообщение"></textarea>
+                            <button class="contacts__button" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                    <footer class="footer" data-content="footer">
+                        <p class="footer__text">
+                            Разработано frontend-разработчиком - Усольцев Дмитрий. Все права защищены.
+                        </p>
+                    </footer>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
