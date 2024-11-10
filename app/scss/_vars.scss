@@ -1,11 +1,16 @@
-$default: #737373;
-$accent: #CF404D;
-$title: #313131;
+$default-fs: 1rem;
 
+$white-color: #fff;
+$default-color: #737373;
+$accent-color: #CF404D;
+$title-color: #313131;
+$subtitle-color: #c7c5c5;
+$dark-accent-color: #2D3E4F;
 
-%oswald{
+$section-padding: clamp(1rem, 5vh, 5rem) 0;
+
+%oswald {
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: 400;
 }
-

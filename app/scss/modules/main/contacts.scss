@@ -1,0 +1,69 @@
+@use '../../vars' as vars;
+@use '../mixins' as mixin;
+
+.contacts {
+  background-color: #fafafa;
+
+  &__inner {
+    justify-content: space-between;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__form-inner {
+    margin: 0 auto;
+    width: max(18rem / 2, 95%);
+  }
+
+  &__form-box {
+    @include mixin.df();
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__input,
+  &__textarea {
+    display: inline-block;
+    border: none;
+    background-color: vars.$white-color;
+    border-radius: .4rem;
+    box-shadow: 1px 2px 13px vars.$subtitle-color;
+    padding: clamp(.7rem, 3vw, 1.2rem) clamp(1rem, 3vw, 1.5rem);
+
+    &::placeholder {
+      @extend %oswald;
+      color: #656565;
+    }
+  }
+
+  &__input {
+    width: max(clamp(9rem, 4vw, 19rem), 48%);
+  }
+
+  &__textarea {
+    width: max(18rem, 100%);
+    height: 110px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    display: block;
+    color: #fff;
+    width: 100%;
+    border: none;
+    height: 45px;
+    background-color: vars.$accent-color;
+    cursor: pointer;
+    transition: all .7s;
+
+    &:hover {
+      border-radius: 10px;
+      color: #000;
+      transition: all .5s;
+    }
+  }
+}

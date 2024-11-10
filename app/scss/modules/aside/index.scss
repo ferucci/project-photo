@@ -1,0 +1,18 @@
+@use 'menu';
+@use 'social';
+@use '../../vars' as vars;
+
+@use '../mixins/' as mixin;
+
+.aside {
+  @include mixin.df(normal, space-between);
+  flex-direction: column;
+  background-color: vars.$dark-accent-color;
+  width: max(50vw, 20rem);
+  height: 100vh;
+  transition: all .6s;
+}
+
+.aside.aside-active {
+  transform: translateX(0%);
+}

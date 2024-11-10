@@ -1,0 +1,34 @@
+@use '../../vars' as vars;
+@use '../mixins' as mixin;
+
+.menu {
+  margin: auto;
+
+  &__logo {
+    @extend %oswald;
+    @include mixin.title($fs: 1.5rem, $size: 1vw, $color: vars.$accent-color, $lh: normal, $sfs: 1rem);
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    @extend %oswald;
+    color: #fff;
+    line-height: 22px;
+  }
+
+  &__link--active {
+    color: vars.$accent-color;
+  }
+
+}

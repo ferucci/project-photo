@@ -1,0 +1,16 @@
+@use 'header';
+@use 'advantages';
+@use 'contacts';
+@use 'portfolio';
+@use 'footer';
+
+@use '../mixins' as mixin;
+
+.main {
+  @include mixin.df(normal);
+  height: 100%;
+}
+
+.main-content {
+  width: max(100%, 100vw);
+}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/main.min.js" defer></script>
     <title>Сайт визитка</title>
 </head>
 
@@ -14,18 +15,21 @@
     <main class="main">
         <aside class="aside">
             <nav class="menu">
-                <p class="menu__logo">
+                <h2 class="menu__logo">
                     Сверхъестественное
-                </p>
+                </h2>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link menu__link--active" href="#">Главная</a>
+                        <a class="menu__link menu__link--active" href="#header">Главная</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Краткость</a>
+                        <a class="menu__link" href="#advantages">Приемущества</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Галерея</a>
+                        <a class="menu__link" href="#portfolio">Галерея</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -88,11 +92,11 @@
             </nav>
         </aside>
         <div class="main-content">
-            <header class="header">
-                <button class="header__menu-button">
-                    <span class="header__menu-item"></span>
-                </button>
-                <div class="header__inner">
+            <button class="header__menu-button menu-button">
+                <span class="menu-button__item"></span>
+            </button>
+            <header class="content header" data-content="header">
+                <div class="header__inner  content__inner">
                     <h1 class="header__title">
                         Добро пожаловать в Сверхъестественное
                     </h1>
@@ -105,14 +109,17 @@
                     </div>
                 </div>
             </header>
-            <section class="advantages">
-                <div class="advantages__inner">
-                    <h2 class="title">
-                        Мои приемущества
-                    </h2>
-                    <p class="subtitle">
-                        Данный блок демонстрирует достижения
-                    </p>
+            <section class="content advantages" data-content="advantages">
+                <div class="advantages__inner  content__inner">
+                    <div class="content__header">
+                        <h2 class="title">
+                            Мои приемущества
+                        </h2>
+                        <p class="subtitle">
+                            Данный блок демонстрирует достижения
+                        </p>
+                    </div>
+
                     <div class="advantages__items">
                         <div class="advantages__item advantages__item--camera">
                             <h3 class="advantages__title">
@@ -145,7 +152,8 @@
                             </h3>
                             <p class="advantages__text">
                                 Многообразие использования достойный показатель вашего внимания. Регулировка фокуса,
-                                расстановка элементов и многое другое вы можете осуществить в любом редакторе, без потери качества!
+                                расстановка элементов и многое другое вы можете осуществить в любом редакторе, без
+                                потери качества!
                             </p>
                             <a class="advantages__link" href="#">
                                 Читать полностью
@@ -165,56 +173,65 @@
                             </a>
                         </div>
                     </div>
+                    <div class="advantages__action">
+                        <p class="advantages__action-text">
+                            Забронировать съёмку
+                        </p>
+                        <a class="button advantages__button" href="#">Позвонить</a>
+                    </div>
                 </div>
-                <div class="advantages__action">
-                    <p class="advantages__action-text">
-                        Забронировать съёмку
-                    </p>
-                    <a class="button advantages__button" href="#">Позвонить</a>
+
+            </section>
+            <section class="content portfolio" data-content="portfolio">
+                <div class="portfolio__inner content__inner">
+
+                    <div class="content__header">
+                        <h2 class="title">
+                            Мои работы
+                        </h2>
+                        <p class="subtitle">
+                            Обязательно посмотрите представленные шедевры
+                        </p>
+                    </div>
+
+                    <div class="portfolio__items">
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work1.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work2.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work3.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work4.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work5.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work6.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work7.jpg" alt="работы с галереи">
+                        </div>
+                        <div class="portfolio__item">
+                            <img class="portfolio__image" src="images/content/gallery/work8.jpg" alt="работы с галереи">
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="portfolio">
-                <h2 class="title">
-                    Мои работы
-                </h2>
-                <p class="subtitle">
-                    Обязательно посмотрите представленные шедевры
-                </p>
-                <div class="portfolio__items">
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work1.jpg" alt="работы с галереи">
+            <section class="content contacts" data-content="contacts">
+                <div class="contacts__inner content__inner">
+                    <div class="content__header">
+                        <h2 class="title">
+                            Контактная форма
+                        </h2>
+                        <p class="subtitle">
+                            Здесь вы можете оставить пожелания и предложения.
+                        </p>
                     </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work2.jpg" alt="работы с галереи">
-                    </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work3.jpg" alt="работы с галереи">
-                    </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work4.jpg" alt="работы с галереи">
-                    </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work5.jpg" alt="работы с галереи">
-                    </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work6.jpg" alt="работы с галереи">
-                    </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work7.jpg" alt="работы с галереи">
-                    </div>
-                    <div class="portfolio__item">
-                        <img class="portfolio__image" src="images/content/gallery/work8.jpg" alt="работы с галереи">
-                    </div>
-                </div>
-            </section>
-            <section class="contacts">
-                <div class="contacts__inner">
-                    <h2 class="title">
-                        Контактная форма
-                    </h2>
-                    <p class="subtitle">
-                        Здесь вы можете оставить пожелания и предложения.
-                    </p>
                     <form class="contacts__form" action="#">
                         <div class="contacts__form-inner">
                             <div class="contacts__form-box">
@@ -225,17 +242,18 @@
                             <button class="contacts__button" type="submit">Отправить</button>
                         </div>
                     </form>
+                    <footer class="footer" data-content="footer">
+                        <p class="footer__text">
+                            Разработано frontend-разработчиком - Усольцев Дмитрий. Все права защищены.
+                        </p>
+                    </footer>
                 </div>
+
             </section>
-            <footer class="footer">
-                <p class="footer__text">
-                    Разработано frontend-разработчиком - Усольцев Дмитрий. Все права защищены.
-                </p>
-            </footer>
+
         </div>
     </main>
 
-    <script src="js/main.min.js"></script>
 </body>
 
 </html>

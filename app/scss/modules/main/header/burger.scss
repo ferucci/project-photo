@@ -1,0 +1,67 @@
+@use '../../../vars' as vars;
+@use '../../mixins' as mixin;
+
+$max-width: 2.8rem;
+$height-item: .22rem;
+$border-radius-item: .5rem;
+$distance-items: .5rem;
+
+.menu-button {
+  @include mixin.burgerButton($max-width, $max-width);
+  display: none;
+  cursor: pointer;
+  transition: all .6s;
+  position: relative;
+
+  &__item {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: vars.$accent-color;
+
+    width: $max-width;
+    height: $height-item;
+    border-radius: $border-radius-item;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: vars.$accent-color;
+      left: 50%;
+      width: calc($max-width - ($max-width / 1.5));
+      height: $height-item;
+      border-radius: $border-radius-item;
+      background-color: vars.$accent-color;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      top: $distance-items;
+    }
+
+    &::before {
+      top: -$distance-items;
+    }
+  }
+}
+
+.menu-button--active {
+  .menu-button__item {
+    width: 0;
+    height: 0;
+  }
+
+  .menu-button__item::after {
+    transform: rotate(45deg) translate(-15px);
+    width: clamp(1.5rem, 5vh, $max-width);
+  }
+
+  .menu-button__item::before {
+    transform: rotate(-45deg) translate(-15px);
+    width: clamp(1.5rem, 5vh, $max-width);
+  }
+}

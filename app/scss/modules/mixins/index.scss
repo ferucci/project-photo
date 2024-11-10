@@ -1,0 +1,40 @@
+@use '../../vars' as vars;
+
+@mixin df($posX: center, $posY: center, $fd: initial) {
+  display: flex;
+  flex-direction: $fd;
+
+  @if $posY !=center $posY !='' {
+    align-items: $posX;
+  }
+
+  justify-content: $posY;
+}
+
+@mixin title($fs: 1rem, $color: vars.$title-color, $size: 5vw, $lh: 140%, $sfs: 1.5rem) {
+  font-size: clamp($sfs, $size, $fs);
+  line-height: $lh;
+  color: $color;
+  text-align: center;
+}
+
+@mixin button {
+  @extend %oswald;
+  font-size: 1rem;
+  color: vars.$white-color;
+  line-height: normal;
+  border-radius: .4rem;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+$width-button-default: 20rem;
+$height-button-default: calc($width-button-default / 5);
+
+@mixin burgerButton($w: $width-button-default,
+  $h: $height-button-default) {
+  width: max($w);
+  height: max($h);
+  @include button;
+}

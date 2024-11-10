@@ -1,0 +1,91 @@
+@use '../../vars' as vars;
+@use '../mixins' as mixin;
+
+.advantages {
+  &__items {
+    @include mixin.df(initial, center);
+    gap: .5rem;
+    flex-wrap: wrap
+  }
+
+  &__item {
+    @include mixin.df(initial, space-between, column);
+    width: max(20rem, 40%);
+    padding-top: 7rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__item--camera {
+    background-image: url(../images/icons/camera.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  &__item--adapt {
+    background-image: url(../images/icons/adapt.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  &__item--options {
+    background-image: url(../images/icons/options.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  &__item--fly {
+    background-image: url(../images/icons/fly.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  &__link {
+    display: block;
+    margin-top: auto;
+    @extend %oswald;
+    font-size: 18px;
+    line-height: 22px;
+    color: vars.$accent-color;
+  }
+
+  &__action {
+    @include mixin.df($posY: space-between);
+    background-color: vars.$accent-color;
+    width: 100%;
+    margin-top: auto;
+    padding: clamp(2rem, 5vw, 4rem);
+  }
+
+  &__action-text {
+    @extend %oswald;
+    @include mixin.title($fs: 2.2rem, $sfs: 1.4rem, $color: vars.$white-color);
+  }
+
+  &__button {
+    border: 2px solid vars.$white-color;
+  }
+}

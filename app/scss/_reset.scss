@@ -1,18 +1,17 @@
+@use 'vars' as vars;
+
 html {
     box-sizing: border-box;
 }
+
 *,
 *::after,
-*::before{
+*::before {
     box-sizing: inherit;
 }
 
-body{
-    min-height: 100vh;
-}
-
 ul[class],
-ol[class]{
+ol[class] {
     padding: 0;
 }
 
@@ -31,18 +30,19 @@ figure,
 figcaption,
 blockquote,
 dl,
-dd{
+dd {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
-ul[class]{
+
+ul[class] {
     list-style: none;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
 }
@@ -50,7 +50,7 @@ img{
 input,
 button,
 textarea,
-select{
+select {
     font: inherit;
-    outline-color: $accent;
+    outline-color: vars.$accent-color;
 }

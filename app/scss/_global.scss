@@ -1,46 +1,56 @@
-body{
-    font-size: 16px;
+@use 'vars' as vars;
+@use './modules/mixins/' as mixin;
+
+body {
+    font-size: vars.$default-fs;
     line-height: 140%;
     color: #000;
     font-family: 'Elsie', cursive;
+    min-height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-.container{
+.container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.button{
-    @extend %oswald;
-    font-size: 18px;
-    line-height: 22px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 12px 24px;
-}
-.title{
-    @extend %oswald;
-    font-size: 32px;
-    line-height: 38px;
-    color: $title;
-    text-transform: uppercase;
-    text-align: center;
-}
+.content {
+    display: none;
+    height: 100lvh;
+    overflow-y: auto;
 
-.subtitle{
-    font-size: 20px;
-    line-height: 32px;
-    color: $default;
-    margin: 22px 0 62px 0;
-    text-align: center;
-}
+    &__inner {
+        overflow-y: auto;
+        padding: clamp(2.8rem, 15vw, 5rem) 0;
+        @include mixin.df($posX: initial, $posY: initial, $fd: column);
+        height: 100%;
+        gap: 2rem;
 
-@media (max-width: 440px){
-    .subtitle{
-        font-size: 18px;
-        line-height: 26px;
-        color: #737373;
-        margin: 15px 0 40px 0;
+        &:has(.advantages__action),
+        &:has(.footer) {
+            padding-bottom: 0
+        }
     }
+}
+
+.button {
+    @include mixin.button;
+    padding: .77rem 1.5rem;
+}
+
+.title {
+    @include mixin.title(2rem);
+}
+
+.subtitle {
+    @include mixin.title($fs: 1.3rem, $color: vars.$default-color, $size: 4vw, $sfs: 1rem);
+}
+
+.title,
+.subtitle {
+    padding: 0 clamp(.5rem, 3vw, 1.5rem);
 }
