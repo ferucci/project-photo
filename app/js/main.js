@@ -53,8 +53,31 @@ class MenuController {
             section.style.display = 'none';
             if (section.hasAttribute('data-content') && section.dataset.content === contentId) {
                 section.style.display = 'block';
+
+                if (section.dataset.content === "advantages") {
+                    this.viewAllText(section);
+                }
+
             }
+
         });
+    }
+
+    viewAllText(section) {
+        const sectionClassName = 'advantages';
+        const blockItems = section.querySelector(`.${sectionClassName}__items`);
+        const items = blockItems.querySelectorAll(`.${sectionClassName}__item > a`);
+
+        items.forEach((item, id) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = e.target;
+                const text = target.previousElementSibling;
+                text.style.display = 'block';
+                target.style.display = 'none';
+            })
+
+        })
     }
 }
 
